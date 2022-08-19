@@ -32,6 +32,9 @@ func (rng *Range) Parse(s string) error {
 	if rng.Len() > 0 {
 		rng = &Range{}
 	}
+	if s == "" {
+		return nil
+	}
 	for _, i := range strings.Split(s, ",") {
 		if strings.Contains(i, "-") {
 			r := strings.Split(i, "-")

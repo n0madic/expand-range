@@ -13,6 +13,12 @@ func TestRange(t *testing.T) {
 		wantErr bool
 	}{
 		{
+			name:    "empty",
+			str:     "",
+			rng:     Range{},
+			wantErr: false,
+		},
+		{
 			name:    "simple",
 			str:     "1,3",
 			rng:     Range{1, 3},
